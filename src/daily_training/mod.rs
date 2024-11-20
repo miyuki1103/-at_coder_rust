@@ -1,6 +1,7 @@
 use std::io;
 
-pub fn ez_a() -> String{
+// 2024-11-19 1530
+pub fn ez_a(v: Vec<u32>) -> String{
     // Create a new mutable string to store the user input
     let mut input = String::new();
 
