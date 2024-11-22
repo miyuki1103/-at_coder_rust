@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 
 // https://atcoder.jp/contests/abc380/tasks/abc380_a
-pub fn q1_a(number: u32) -> String{
-    let n_string= number.to_string();
+pub fn q1_a(number: u64) -> String{
+    let n_string= number.to_string().trim().to_string();
     let v_n: Vec<char>= n_string.chars().collect();
     
-    let mut map_one: HashMap<char, u32>= HashMap::new();
-    let mut map_two: HashMap<char, u32>= HashMap::new();
-    let mut map_three: HashMap<char, u32>= HashMap::new();
+    let mut map_one: HashMap<char, u64>= HashMap::new();
+    let mut map_two: HashMap<char, u64>= HashMap::new();
+    let mut map_three: HashMap<char, u64>= HashMap::new();
 
     for e_n in v_n {
         match e_n {
@@ -15,19 +15,22 @@ pub fn q1_a(number: u32) -> String{
                 map_one.insert('1', 1);
             },
             '2' => {
+                map_one.insert('2', 1);
+
                 if *(map_one.get(&'2').unwrap()) == 1 {
                     map_two.insert('2', 2);
                 }
-                map_one.insert('2', 1);
             },
             '3' => {
+                map_one.insert('3',1);
+
                 if *(map_one.get(&'3').unwrap()) == 1 {
                     map_two.insert('3', 2);
+                    
                 }
                 if *(map_two.get(&'3').unwrap()) == 2 {
-                    map_three.insert('3', 2);
+                    map_three.insert('3', 3);
                 }
-                map_one.insert('2',10);
             },
             _ => { return "No".to_string(); }
         }
