@@ -1,31 +1,68 @@
+mod abc378;
+mod abc379;
 mod abc380;
 mod abc381;
-// mod daily_training;
+mod daily_training;
 
-#[cfg(test)]
-mod abc381_a {
+
+mod abc378_a {
     use super::*;
     #[test]
     fn test1() {
-        let result= abc381::q1_a(5, "11/22".to_string());
-        assert_eq!(result, "Yes".to_string());
+        let result= abc378::q1_a(Vec::from([2, 1, 2, 1]));
+        assert_eq!(result, 2);
     }
     #[test]
     fn test2() {
-        let result= abc381::q1_a(1, "/".to_string());
-        assert_eq!(result, "Yes".to_string());
+        let result= abc378::q1_a(Vec::from([4, 4, 4, 1]));
+        assert_eq!(result, 1);
     }
     #[test]
     fn test3() {
-        let result= abc381::q1_a(4, "1/22".to_string());
-        assert_eq!(result, "No".to_string());
-    }
-    #[test]
-    fn test4() {
-        let result= abc381::q1_a(5, "22/11".to_string());
-        assert_eq!(result, "No".to_string());
+        let result= abc378::q1_a(Vec::from([1, 2, 3, 4]));
+        assert_eq!(result, 0);
     }
 }
+
+// mod abc379_a {
+//     use super::*;
+//     #[test]
+//     fn test1() {
+//         let result= abc379::q1_a(379);
+//         assert_eq!(result, (793 ,937));
+//     }
+//     #[test]
+//     fn test2() {
+//         let result= abc379::q1_a(919);
+//         assert_eq!(result, (199, 991));
+//     }
+// }
+
+
+// #[cfg(test)]
+// mod abc381_a {
+//     use super::*;
+//     #[test]
+//     fn test1() {
+//         let result= abc381::q1_a(5, "11/22".to_string());
+//         assert_eq!(result, "Yes".to_string());
+//     }
+//     #[test]
+//     fn test2() {
+//         let result= abc381::q1_a(1, "/".to_string());
+//         assert_eq!(result, "Yes".to_string());
+//     }
+//     #[test]
+//     fn test3() {
+//         let result= abc381::q1_a(4, "1/22".to_string());
+//         assert_eq!(result, "No".to_string());
+//     }
+//     #[test]
+//     fn test4() {
+//         let result= abc381::q1_a(5, "22/11".to_string());
+//         assert_eq!(result, "No".to_string());
+//     }
+// }
 
 // #[cfg(test)]
 // mod abc380_a {
