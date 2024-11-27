@@ -2,27 +2,39 @@ mod abc378;
 mod abc379;
 mod abc380;
 mod abc381;
+
 mod daily_training;
 
 
-mod abc378_a {
+#[cfg(test)]
+mod q_2024_11_26_1530 {
     use super::*;
     #[test]
-    fn test1() {
-        let result= abc378::q1_a(Vec::from([2, 1, 2, 1]));
-        assert_eq!(result, 2);
-    }
-    #[test]
-    fn test2() {
-        let result= abc378::q1_a(Vec::from([4, 4, 4, 1]));
-        assert_eq!(result, 1);
-    }
-    #[test]
-    fn test3() {
-        let result= abc378::q1_a(Vec::from([1, 2, 3, 4]));
-        assert_eq!(result, 0);
+    fn ez_a() {
+        let result= daily_training::ez1_a("9x9".to_string());
+        assert_eq!(result, 81);
     }
 }
+
+
+// mod abc378_a {
+//     use super::*;
+//     #[test]
+//     fn test1() {
+//         let result= abc378::q1_a(Vec::from([2, 1, 2, 1]));
+//         assert_eq!(result, 2);
+//     }
+//     #[test]
+//     fn test2() {
+//         let result= abc378::q1_a(Vec::from([4, 4, 4, 1]));
+//         assert_eq!(result, 1);
+//     }
+//     #[test]
+//     fn test3() {
+//         let result= abc378::q1_a(Vec::from([1, 2, 3, 4]));
+//         assert_eq!(result, 0);
+//     }
+// }
 
 // mod abc379_a {
 //     use super::*;
