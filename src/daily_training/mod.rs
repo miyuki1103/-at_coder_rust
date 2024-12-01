@@ -1,6 +1,12 @@
-use std::io;
+use rand::prelude::*;
 
 // https://atcoder.jp/contests/adt_easy_20241126_1
+// https://atcoder.jp/contests/adt_easy_20241126_2
+// https://atcoder.jp/contests/adt_easy_20241126_3
+//
+// https://atcoder.jp/contests/adt_easy_20241127_1
+// https://atcoder.jp/contests/adt_easy_20241127_2
+// https://atcoder.jp/contests/adt_easy_20241127_3
 
 // https://atcoder.jp/contests/adt_easy_20241126_1/tasks/abc232_a
 pub fn ez1_a(s: String) -> u32{
@@ -18,4 +24,24 @@ pub fn ez1_a(s: String) -> u32{
         idx+=1;
     }
     first*second
+}
+
+pub fn ez2_a(n: i32, c: i32, times: Vec<i32>) -> i32{
+    1
+}
+
+pub fn d27_ez3_a(a: i16, b: i16) -> i16{
+    let mut rng = rand::thread_rng();
+    let number= {
+        let mut random_number= 0;
+        while random_number != a+b {
+            random_number= rand::thread_rng().gen_range(0..9);
+            
+            return random_number;
+        }
+
+        return random_number;
+    };
+
+    number
 }
