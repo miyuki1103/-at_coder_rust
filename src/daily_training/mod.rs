@@ -1,13 +1,5 @@
 use rand::prelude::*;
 
-// https://atcoder.jp/contests/adt_easy_20241126_1
-// https://atcoder.jp/contests/adt_easy_20241126_2
-// https://atcoder.jp/contests/adt_easy_20241126_3
-//
-// https://atcoder.jp/contests/adt_easy_20241127_1
-// https://atcoder.jp/contests/adt_easy_20241127_2
-// https://atcoder.jp/contests/adt_easy_20241127_3
-
 // https://atcoder.jp/contests/adt_easy_20241126_1/tasks/abc232_a
 pub fn ez1_a(s: String) -> u32{
     let mut first= 0;
@@ -44,4 +36,15 @@ pub fn d27_ez3_a(a: i16, b: i16) -> i16{
     };
 
     number
+}
+
+// https://atcoder.jp/contests/adt_easy_20241127_2/tasks/abc237_a
+pub fn d0241127_2_ez_b(n_str: String) -> bool{
+    let integer_n= n_str.parse::<i32>().unwrap_or(-99);
+
+    if integer_n == -99 {
+        return false;
+    }
+
+    true
 }

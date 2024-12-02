@@ -5,6 +5,20 @@ mod abc381;
 
 mod daily_training;
 
+mod q_2024_11_27_1800 {
+    use super::*;
+    #[test]
+    fn ez_b1() {
+        let result= daily_training::d0241127_2_ez_b("-9876543210".to_string());
+        assert_eq!(result, false);
+    }
+
+    #[test]
+    fn ez_b2() {
+        let result= daily_training::d0241127_2_ez_b("483597848400000".to_string());
+        assert_eq!(result, false);
+    }
+}
 
 mod q_2024_11_27_2000 {
     use super::*;
